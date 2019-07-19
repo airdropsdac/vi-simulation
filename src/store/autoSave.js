@@ -46,6 +46,9 @@ export default function(_this) {
         if (existingProducers) {
           producers = JSON.parse(existingProducers);
         }
+        if(producers.length === 0) {
+          producers = defaultProducers
+        }
       } catch {}
 
       set(_this.selectedProducers, producers);
